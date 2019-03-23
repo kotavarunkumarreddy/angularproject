@@ -1,0 +1,12 @@
+<div class="container">
+    <input type="text" class="form-control mt-2"
+    #title (keyup.enter)="createData(title)">
+    <ul class="list-group">
+        <li class="list-group-item mt-2" *ngFor="let post of posts">
+           <h1> {{post.title}}</h1>
+            <p>{{post.body}}</p>
+            <button class="btn btn-danger" (click)="removeData(post)"> delete</button>
+            <img src="{{post.avatar_url}}" alt="">
+        </li>
+    </ul>
+</div>

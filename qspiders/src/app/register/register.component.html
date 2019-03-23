@@ -1,0 +1,25 @@
+<div class="card col-md-4 offset-4 mt-4 card">
+<div class="card-body">
+<form action="" method="get">
+  <h1>Register</h1>
+
+<div class="form-group">
+  <label for="username">username</label>
+  <input type="text" class="form-control" id="username">
+  <div class="alert alert-danger mt-2"
+  *ngIf="username.touched && username.invalid">
+<p *ngIf="username.errors.required">this field is required</p>
+<p *ngIf="username.errors.minlength">minimum 3 characters</p>
+<p *ngIf="username.errors.pattren">its not match</p>
+</div>
+</div>
+<div class="form-group">
+  <label for="password">password</label>
+  <input type="password" class="form-control" id="password">
+</div>
+<div class="form-group">
+  <input type="submit" value="submit" button="btn btn-success">
+</div>
+</form>
+</div>
+</div>
